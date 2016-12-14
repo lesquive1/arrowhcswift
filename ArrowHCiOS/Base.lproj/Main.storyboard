@@ -1,10 +1,88 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QkO-LG-ypd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Patients-->
+        <scene sceneID="VdR-Lb-1g3">
+            <objects>
+                <tableViewController id="THM-tX-SJT" customClass="PatientTableViewController" customModule="ArrowHCiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bed-eQ-e5b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatientTableViewCell" rowHeight="112" id="OfH-L4-mOp" customClass="PatientTableViewCell" customModule="ArrowHCiOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="112"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OfH-L4-mOp" id="TeI-A8-bLo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H36-3a-Dp6">
+                                            <rect key="frame" x="5" y="8" width="310" height="42"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMu-7I-Dzj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="479-jP-w7o">
+                                                            <rect key="frame" x="0.0" y="0.0" width="310" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdr-EI-qZy">
+                                                    <rect key="frame" x="0.0" y="21" width="310" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-4a-Lze">
+                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-Xa-HqC">
+                                                            <rect key="frame" x="265" y="0.0" width="45" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="6b1-3s-7C6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="H36-3a-Dp6" firstAttribute="centerX" secondItem="TeI-A8-bLo" secondAttribute="centerX" id="2Wf-He-7BX"/>
+                                        <constraint firstItem="H36-3a-Dp6" firstAttribute="leading" secondItem="TeI-A8-bLo" secondAttribute="leadingMargin" constant="-3" id="8RM-7w-2Ls"/>
+                                        <constraint firstItem="H36-3a-Dp6" firstAttribute="top" secondItem="TeI-A8-bLo" secondAttribute="topMargin" id="GYU-iR-IZb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="patientDepartment" destination="qOC-4a-Lze" id="9Ed-OU-vJg"/>
+                                    <outlet property="patientName" destination="479-jP-w7o" id="EXy-x4-xQ1"/>
+                                    <outlet property="patientRoom" destination="jsm-Xa-HqC" id="rIW-3f-X1p"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="THM-tX-SJT" id="V4W-uw-2rQ"/>
+                            <outlet property="delegate" destination="THM-tX-SJT" id="exg-zL-peI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Patients" id="cmQ-Rb-3e3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtz-kI-pfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="229"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,7 +99,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234.66666666666666" y="342.21999999999997"/>
+            <point key="canvasLocation" x="892" y="311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lkR-o2-l9Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QkO-LG-ypd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JEz-hq-Mvy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="THM-tX-SJT" kind="relationship" relationship="rootViewController" id="26T-X6-MAo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKK-Lr-B9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27" y="229"/>
         </scene>
     </scenes>
 </document>
