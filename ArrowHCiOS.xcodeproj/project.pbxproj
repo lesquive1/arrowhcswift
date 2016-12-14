@@ -18,6 +18,7 @@
 		A0DDCD4C1E01984D0099EF06 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDCD4A1E01984D0099EF06 /* Patient.swift */; };
 		A0DDCD4E1E01A6A20099EF06 /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDCD4D1E01A6A20099EF06 /* PatientTableViewController.swift */; };
 		A0DDCD501E01A6D40099EF06 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDCD4F1E01A6D40099EF06 /* PatientTableViewCell.swift */; };
+		A0F210EF1E01B8450052FAD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F210EE1E01B8450052FAD9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		A0DDCD4A1E01984D0099EF06 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		A0DDCD4D1E01A6A20099EF06 /* PatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
 		A0DDCD4F1E01A6D40099EF06 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		A0F210EE1E01B8450052FAD9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				A0DDCD4A1E01984D0099EF06 /* Patient.swift */,
 				A0DDCD4D1E01A6A20099EF06 /* PatientTableViewController.swift */,
 				A0DDCD4F1E01A6D40099EF06 /* PatientTableViewCell.swift */,
+				A0F210EE1E01B8450052FAD9 /* LoginViewController.swift */,
 			);
 			path = ArrowHCiOS;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F210EF1E01B8450052FAD9 /* LoginViewController.swift in Sources */,
 				4A443F571E00FB8F00C7FA99 /* ViewController.swift in Sources */,
 				4A443F551E00FB8F00C7FA99 /* AppDelegate.swift in Sources */,
 				A0DDCD501E01A6D40099EF06 /* PatientTableViewCell.swift in Sources */,
