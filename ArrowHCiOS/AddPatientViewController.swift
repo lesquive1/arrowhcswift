@@ -106,9 +106,9 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
         let request = NSMutableURLRequest(URL: NSURL(string: "https://arrowhc.herokuapp.com/patient")!)
         request.HTTPMethod = "POST";
         
-        let jsonDict = ["patient_name": "Maria5",
+        let jsonDict = ["patient_name": "Maria6",
                         "room_no": "101",
-                        "username": "maria5",
+                        "username": "maria6",
                         "password": "bonita",
                         "doc_id": "583dcc7e5a034e0519757632",
                         "doc_name": "Dr Luis",
@@ -118,7 +118,7 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
                         "nurse_name": "Nr Laura",
                         "nurse_username": "eli",
                         "profile": "patient",
-                        "name": "Maria5",
+                        "name": "Maria6",
                         "email": "testprofile@hotmail.com",
                         "phone": "6478887755"] as Dictionary<String, String>
         
@@ -138,6 +138,9 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
         }
         task.resume()
         
+        let patientTableViewController = segue.destinationViewController as! PatientTableViewController
+        patientTableViewController.patients = [Patient]()
+        patientTableViewController.loadPatients()
         
     }
 
