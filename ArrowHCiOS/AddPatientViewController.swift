@@ -8,13 +8,77 @@
 
 import UIKit
 
-class AddPatientViewController: UIViewController {
+class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
+    
+    
+    @IBOutlet weak var pname: UITextField!
+    
+    
+    @IBOutlet weak var department: UILabel!
+   
+    @IBOutlet weak var roomnumber: UILabel!
 
+    @IBOutlet weak var nursename: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    var departmnt:String = ""
+    var roomn: String = ""
+    var Nname: String = ""
+    
+    var myDatabase = [ ["Cardiology","Neurology","Common"],
+                       ["315","415","215"],
+                       ["Nr.laura","Nr.sagar","Nr.harry"]
+    
+                      ]
+    
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+       return myDatabase.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myDatabase[component].count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return myDatabase[component][row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(component)
+        print(row)
+        
+        
+        switch (component){
+        case 0:
+            
+        departmnt=myDatabase[component][row]
+            department.text = departmnt
+            print(departmnt)
+            
+        case 1:
+            roomn=myDatabase[component][row]
+            roomnumber.text=roomn
+            print(roomn)
+            
+        case 2:
+            
+            Nname=myDatabase[component][row]
+            nursename.text=Nname
+            print(Nname)
+            
+        default:break
+        }
+        
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
