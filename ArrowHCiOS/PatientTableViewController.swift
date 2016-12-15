@@ -19,7 +19,7 @@ class PatientTableViewController: UITableViewController {
     func loadPatients() {
         
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        print(doctorId)
+       // print(doctorId)
         let request = NSMutableURLRequest(URL: NSURL(string: "https://arrowhc.herokuapp.com/doctorpatients/"+doctorId)!)
         request.HTTPMethod = "GET";
         

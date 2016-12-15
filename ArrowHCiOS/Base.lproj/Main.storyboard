@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OfH-L4-mOp" id="TeI-A8-bLo">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="112"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="111.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="479-jP-w7o">
@@ -76,7 +76,7 @@
                                     <outlet property="patientDepartment" destination="qOC-4a-Lze" id="9Ed-OU-vJg"/>
                                     <outlet property="patientName" destination="479-jP-w7o" id="EXy-x4-xQ1"/>
                                     <outlet property="patientRoom" destination="jsm-Xa-HqC" id="rIW-3f-X1p"/>
-                                    <segue destination="Wzu-uc-dX9" kind="push" identifier="showTests" id="bqo-h9-nJo"/>
+                                    <segue destination="Wzu-uc-dX9" kind="push" id="CUg-qG-C4e"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -308,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOz-A2-fy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-251"/>
+            <point key="canvasLocation" x="1671" y="-268"/>
         </scene>
         <!--Patient View-->
         <scene sceneID="VPs-5O-e56">
@@ -451,7 +451,7 @@
             </objects>
             <point key="canvasLocation" x="-200" y="-548"/>
         </scene>
-        <!--Login2 View Controller-->
+        <!--Log In-->
         <scene sceneID="WO2-C8-vMS">
             <objects>
                 <viewController id="OdF-io-6JO" customClass="Login2ViewController" customModule="ArrowHCiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -463,31 +463,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNR-Ib-e6J">
-                                <rect key="frame" x="129" y="118" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animationone" translatesAutoresizingMaskIntoConstraints="NO" id="4gN-3A-qWR">
+                                <rect key="frame" x="0.0" y="130" width="320" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="fp9-ih-I2N"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkb-oL-4we">
+                                <rect key="frame" x="67" y="345" width="187" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQs-EN-8fl">
+                                <rect key="frame" x="67" y="405" width="187" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNR-Ib-e6J">
+                                <rect key="frame" x="8" y="467" width="304" height="46"/>
+                                <state key="normal" image="signIn"/>
                                 <connections>
                                     <action selector="goLogin:" destination="OdF-io-6JO" eventType="touchUpInside" id="f6H-Ew-uAg"/>
                                     <segue destination="THM-tX-SJT" kind="push" identifier="staffView" id="WQH-CK-k3t"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola Mundo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on7-ga-3SU">
-                                <rect key="frame" x="106" y="72" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rQs-EN-8fl" firstAttribute="leading" secondItem="gkb-oL-4we" secondAttribute="leading" id="1Bj-su-tLP"/>
+                            <constraint firstItem="gkb-oL-4we" firstAttribute="top" secondItem="4gN-3A-qWR" secondAttribute="bottom" constant="29" id="3Se-tj-P7K"/>
+                            <constraint firstItem="rQs-EN-8fl" firstAttribute="top" secondItem="gkb-oL-4we" secondAttribute="bottom" constant="30" id="5wM-Th-tge"/>
+                            <constraint firstItem="SNR-Ib-e6J" firstAttribute="leading" secondItem="2pd-fs-SCs" secondAttribute="leadingMargin" constant="-8" id="BsV-j4-evm"/>
+                            <constraint firstItem="SNR-Ib-e6J" firstAttribute="top" secondItem="rQs-EN-8fl" secondAttribute="bottom" constant="32" id="G1c-4Y-A5O"/>
+                            <constraint firstItem="4gN-3A-qWR" firstAttribute="top" secondItem="Q1H-f8-56I" secondAttribute="bottom" constant="66" id="Vmc-Do-qYR"/>
+                            <constraint firstAttribute="trailing" secondItem="4gN-3A-qWR" secondAttribute="trailing" id="bRe-9G-G4n"/>
+                            <constraint firstItem="SNR-Ib-e6J" firstAttribute="centerX" secondItem="rQs-EN-8fl" secondAttribute="centerX" id="biV-Ef-gtk"/>
+                            <constraint firstItem="SNR-Ib-e6J" firstAttribute="centerX" secondItem="4gN-3A-qWR" secondAttribute="centerX" id="dkZ-7t-jNe"/>
+                            <constraint firstItem="gkb-oL-4we" firstAttribute="leading" secondItem="2pd-fs-SCs" secondAttribute="leadingMargin" constant="51" id="hhD-7g-wV4"/>
+                            <constraint firstItem="4gN-3A-qWR" firstAttribute="leading" secondItem="2pd-fs-SCs" secondAttribute="leading" id="oai-ff-IZM"/>
+                            <constraint firstItem="rQs-EN-8fl" firstAttribute="trailing" secondItem="gkb-oL-4we" secondAttribute="trailing" id="xHo-he-WLr"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RH5-eW-ndV"/>
+                    <navigationItem key="navigationItem" title="Log In" id="RH5-eW-ndV"/>
                     <connections>
-                        <outlet property="userName" destination="on7-ga-3SU" id="b9g-XB-npn"/>
+                        <outlet property="pswdTF" destination="rQs-EN-8fl" id="Ppg-X9-SCs"/>
+                        <outlet property="userTF" destination="gkb-oL-4we" id="bUz-dc-35j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0R-Wh-TNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="-435"/>
+            <point key="canvasLocation" x="677" y="-515"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vmM-4a-b1j">
