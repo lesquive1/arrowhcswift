@@ -56,7 +56,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Staff View" id="zye-E2-VpS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qmh-eL-z5H"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qmh-eL-z5H">
+                            <connections>
+                                <segue destination="NkU-ku-1vd" kind="modal" identifier="addPatient" id="Eqd-Kd-Bbd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtz-kI-pfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,7 +70,7 @@
         <!--Add Patient-->
         <scene sceneID="oDa-la-DBn">
             <objects>
-                <viewController id="dB9-9S-paN" sceneMemberID="viewController">
+                <viewController id="dB9-9S-paN" customClass="AddPatientViewController" customModule="ArrowHCiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="beA-Jq-DgP"/>
                         <viewControllerLayoutGuide type="bottom" id="3o9-Xf-4JJ"/>
@@ -126,13 +130,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Patient" id="tnl-6R-ByD">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fde-7g-SqU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fde-7g-SqU">
+                            <connections>
+                                <action selector="cancel:" destination="dB9-9S-paN" id="T4K-Aq-JOX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Gp-kt-e61"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I3-dG-1nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2290" y="-655"/>
+            <point key="canvasLocation" x="2822" y="-655"/>
+        </scene>
+        <!--Add Test-->
+        <scene sceneID="P5W-bm-LM4">
+            <objects>
+                <viewController id="rNk-es-NdS" customClass="AddTestViewController" customModule="ArrowHCiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EtI-69-weN"/>
+                        <viewControllerLayoutGuide type="bottom" id="yDn-qa-nhN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lQC-we-8Vi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Test" id="bBf-a0-Sa3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="o8w-zh-oK4">
+                            <connections>
+                                <action selector="cancel:" destination="rNk-es-NdS" id="keP-Kj-Ixf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jZz-we-Yt7"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAJ-gD-dch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2856" y="8"/>
         </scene>
         <!--Tests-->
         <scene sceneID="ZLk-B3-wcM">
@@ -256,11 +290,17 @@
                             <outlet property="delegate" destination="Wzu-uc-dX9" id="7oe-3a-yeV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tests" id="UzH-dd-82r"/>
+                    <navigationItem key="navigationItem" title="Tests" id="UzH-dd-82r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ihk-P5-y81">
+                            <connections>
+                                <segue destination="rNk-es-NdS" kind="push" identifier="addTest" id="GOx-5O-9UI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOz-A2-fy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="-78"/>
+            <point key="canvasLocation" x="1886" y="-251"/>
         </scene>
         <!--Patient View-->
         <scene sceneID="VPs-5O-e56">
@@ -458,6 +498,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHy-RM-rZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="284" y="-435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LWM-qJ-ZNf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NkU-ku-1vd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="480-Do-i1W"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QMP-2S-0iP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dB9-9S-paN" kind="relationship" relationship="rootViewController" id="UpR-VE-jcW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgz-N0-Be1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290" y="-655"/>
         </scene>
     </scenes>
     <resources>
