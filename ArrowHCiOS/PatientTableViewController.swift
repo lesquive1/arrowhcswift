@@ -193,6 +193,7 @@ class PatientTableViewController: UITableViewController {
                 let indexPath = tableView.indexPathForCell(selectedPatientCell)!
                 let selectedPatient = patients[indexPath.row]
                 testTableViewController.patientId = selectedPatient.id
+                testTableViewController.patientName = selectedPatient.patient_name
             }
         }
         else if segue.identifier == "addPAtient" {

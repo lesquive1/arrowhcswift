@@ -14,6 +14,8 @@ class TestTableViewController: UITableViewController {
     var tests = [Test]()
     
     var patientId: String = ""
+    var patientName: String = ""
+    
     
     func loadTests() {
         
@@ -157,7 +159,7 @@ class TestTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -165,10 +167,15 @@ class TestTableViewController: UITableViewController {
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let addtestViewController = segue.destinationViewController as! AddTestViewController
+        
+        addtestViewController.patientId = patientId
+        addtestViewController.patientName = patientName
 
         
     }
-    */
+    
     
     // MARK: - Actions
     
