@@ -9,6 +9,9 @@
 import UIKit
 
 class AddTestViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
+    
+    var patientName: String = ""
+    var patientId: String = ""
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -44,8 +47,8 @@ class AddTestViewController: UIViewController, UITextFieldDelegate, UINavigation
         
         let mDate = NSDate()
         
-        let jsonDict = ["patient_name": "Maria6",
-                        "patient_id": "58530014ddff3a000444170b",
+        let jsonDict = ["patient_name": patientName,
+                        "patient_id": patientId,
                         "blood_presure": "test1",
                         "cholesterol": "test2",
                         "heart_rate": "test3",
