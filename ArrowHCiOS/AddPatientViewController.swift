@@ -20,6 +20,7 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    @IBOutlet weak var nursename: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +32,7 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
     var departmnt:String = ""
     var roomn: String = ""
     var Nname: String = ""
+    
     
     var myDatabase = [ ["Cardiology","Neurology","Common"],
                        ["315","415","215"],
@@ -104,9 +106,9 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
         let request = NSMutableURLRequest(URL: NSURL(string: "https://arrowhc.herokuapp.com/patient")!)
         request.HTTPMethod = "POST";
         
-        let jsonDict = ["patient_name": "Maria4",
+        let jsonDict = ["patient_name": "Maria5",
                         "room_no": "101",
-                        "username": "maria4",
+                        "username": "maria5",
                         "password": "bonita",
                         "doc_id": "583dcc7e5a034e0519757632",
                         "doc_name": "Dr Luis",
@@ -116,7 +118,7 @@ class AddPatientViewController: UIViewController, UIPickerViewDelegate,UIPickerV
                         "nurse_name": "Nr Laura",
                         "nurse_username": "eli",
                         "profile": "patient",
-                        "name": "Maria4",
+                        "name": "Maria5",
                         "email": "testprofile@hotmail.com",
                         "phone": "6478887755"] as Dictionary<String, String>
         
