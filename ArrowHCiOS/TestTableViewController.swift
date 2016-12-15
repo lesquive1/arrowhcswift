@@ -79,8 +79,9 @@ class TestTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+
         loadTests()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,7 +112,7 @@ class TestTableViewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let test = tests[indexPath.row]
         
-        cell.testDate.text = test.patient_name
+        cell.testDate.text = test.date
         cell.testBlood.text = test.blood_presure
         cell.testCholesterol.text = test.cholesterol
         cell.testHeart.text = test.heart_rate
@@ -168,5 +169,25 @@ class TestTableViewController: UITableViewController {
         
     }
     */
+    
+    // MARK: - Actions
+    
+    @IBAction func unwindToTestList(sender: UIStoryboardSegue) {
+        
+        tests = [Test]()
+        
+        loadTests()
+        /*
+         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
+         
+         // Add a new meal.
+         let newIndexPath = IndexPath(row: meals.count, section: 0)
+         
+         meals.append(meal)
+         tableView.insertRows(at: [newIndexPath], with: .automatic)
+         }
+         */
+        
+    }
 
 }
