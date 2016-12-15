@@ -182,16 +182,25 @@ class PatientTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        let testTableViewController = segue.destinationViewController as! TestTableViewController
-        
-        // Get the cell that generated this segue.
-        if let selectedPatientCell = sender as? PatientTableViewCell {
-            let indexPath = tableView.indexPathForCell(selectedPatientCell)!
-            let selectedPatient = patients[indexPath.row]
-            testTableViewController.patientId = selectedPatient.id
+
+        if segue.identifier == "showTests" {
+            let testTableViewController = segue.destinationViewController as! TestTableViewController
+            //let testTableViewController = nav.topViewController as! TestTableViewController
+            
+            
+            // Get the cell that generated this segue.
+            if let selectedPatientCell = sender as? PatientTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedPatientCell)!
+                let selectedPatient = patients[indexPath.row]
+                testTableViewController.patientId = selectedPatient.id
+            }
+        }
+        else if segue.identifier == "addPAtient" {
+            print("Adding new patient.")
         }
         
+
+
         
     }
 

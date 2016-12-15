@@ -22,6 +22,8 @@ class TestTableViewController: UITableViewController {
         let request = NSMutableURLRequest(URL: NSURL(string: "https://arrowhc.herokuapp.com/test/"+patientId)!)
         request.HTTPMethod = "GET";
         
+        print("https://arrowhc.herokuapp.com/test/"+patientId)
+        
         session.dataTaskWithRequest(request) { (data, response, error) -> Void in
             if let data = data {
                 let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
@@ -77,6 +79,8 @@ class TestTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadTests()
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,7 @@
 		4A443F5F1E00FB8F00C7FA99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A443F5D1E00FB8F00C7FA99 /* LaunchScreen.storyboard */; };
 		4A443F6A1E00FB8F00C7FA99 /* ArrowHCiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A443F691E00FB8F00C7FA99 /* ArrowHCiOSTests.swift */; };
 		4A443F751E00FB8F00C7FA99 /* ArrowHCiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A443F741E00FB8F00C7FA99 /* ArrowHCiOSUITests.swift */; };
+		A058DE071E028093001B2B25 /* Login2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058DE061E028093001B2B25 /* Login2ViewController.swift */; };
 		A0C5C7E51E025423000FEF2A /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5C7E41E025423000FEF2A /* Test.swift */; };
 		A0C5C7E61E025423000FEF2A /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5C7E41E025423000FEF2A /* Test.swift */; };
 		A0C5C7E81E025528000FEF2A /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5C7E71E025528000FEF2A /* TestTableViewController.swift */; };
@@ -56,6 +57,7 @@
 		4A443F701E00FB8F00C7FA99 /* ArrowHCiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrowHCiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A443F741E00FB8F00C7FA99 /* ArrowHCiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowHCiOSUITests.swift; sourceTree = "<group>"; };
 		4A443F761E00FB8F00C7FA99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A058DE061E028093001B2B25 /* Login2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login2ViewController.swift; sourceTree = "<group>"; };
 		A0C5C7E41E025423000FEF2A /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		A0C5C7E71E025528000FEF2A /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		A0C5C7E91E025542000FEF2A /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				A0C5C7E41E025423000FEF2A /* Test.swift */,
 				A0C5C7E71E025528000FEF2A /* TestTableViewController.swift */,
 				A0C5C7E91E025542000FEF2A /* TestTableViewCell.swift */,
+				A058DE061E028093001B2B25 /* Login2ViewController.swift */,
 			);
 			path = ArrowHCiOS;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				A0F210EF1E01B8450052FAD9 /* LoginViewController.swift in Sources */,
 				4A443F571E00FB8F00C7FA99 /* ViewController.swift in Sources */,
 				A0C5C7EA1E025542000FEF2A /* TestTableViewCell.swift in Sources */,
+				A058DE071E028093001B2B25 /* Login2ViewController.swift in Sources */,
 				4A443F551E00FB8F00C7FA99 /* AppDelegate.swift in Sources */,
 				A0C5C7E51E025423000FEF2A /* Test.swift in Sources */,
 				A0DDCD501E01A6D40099EF06 /* PatientTableViewCell.swift in Sources */,
