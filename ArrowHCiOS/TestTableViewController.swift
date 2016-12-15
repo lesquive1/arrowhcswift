@@ -1,5 +1,5 @@
 //
-//  PatientTableViewController.swift
+//  TestTableViewController.swift
 //  ArrowHCiOS
 //
 //  Created by Luis Esquivel on 2016-12-14.
@@ -8,19 +8,18 @@
 
 import UIKit
 
+class TestTableViewController: UITableViewController {
 
-class PatientTableViewController: UITableViewController {
     
+    var tests = [Test]()
     
-    var patients = [Patient]()
+    var patientId: String = ""
     
-    var doctorId: String = ""
-    
-    func loadPatients() {
+    func loadTests() {
         
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        print(doctorId)
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://arrowhc.herokuapp.com/doctorpatients/"+doctorId)!)
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://arrowhc.herokuapp.com/test/"+patientId)!)
         request.HTTPMethod = "GET";
         
         session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -31,54 +30,34 @@ class PatientTableViewController: UITableViewController {
                     
                     for var i = 0; i < json?.count; i++ {
                         if let item = json![i] {
-                            //print(item)
                             
                             let id = item["_id"] as? String
                             let patient_name = item["patient_name"] as? String
-                            let room_no = item["room_no"] as? String
-                            let username = item["username"] as? String
-                            let password = item["password"] as? String
-                            let doc_id = item["doc_id"] as? String
-                            let doc_name = item["doc_name"] as? String
-                            let doc_username = item["doc_username"] as? String
-                            let department = item["department"] as? String
-                            let nurse_id = item["nurse_id"] as? String
-                            let nurse_name = item["nurse_name"] as? String
-                            let nurse_username = item["nurse_username"] as? String
+                            let patient_id = item["patient_id"] as? String
+                            let blood_presure = item["blood_presure"] as? String
+                            let cholesterol = item["cholesterol"] as? String
+                            let heart_rate = item["heart_rate"] as? String
+                            let temperature = item["temperature"] as? String
+                            let date = item["date"] as? String
                             
-                            
-                            let patient = Patient(id: id!,
-                                                  patient_name: patient_name!,
-                                                  room_no: room_no!,
-                                                  username: username!,
-                                                  password: password!,
-                                                  doc_id: doc_id!,
-                                                  doc_name: doc_name!,
-                                                  doc_username: doc_username!,
-                                                  department: department!,
-                                                  nurse_id: nurse_id!,
-                                                  nurse_name: nurse_name!,
-                                                  nurse_username: nurse_username!)!
-                            
+                            let test = Test(id: id!,
+                                            patient_name: patient_name!,
+                                            patient_id: patient_id!,
+                                            blood_presure: blood_presure!,
+                                            cholesterol: cholesterol!,
+                                            heart_rate: heart_rate!,
+                                            temperature: temperature!,
+                                            date: date!)!
                             
                             dispatch_async(dispatch_get_main_queue()) {
                                 
-                                self.patients.append(patient)
+                                self.tests.append(test)
                                 
                                 self.tableView.reloadData()
                                 
                             }
                         }
-                    }
-                    /*
-                     
-                     
-                     if let email = item["email"] as? String {
-                     print(email)
-                     dispatch_async(dispatch_get_main_queue()) {
-                     self.labelTest.text = email
-                     }
-                     */
+                    } //for
                     
                 } else {
                     //completion(success: false, object: json)
@@ -89,7 +68,7 @@ class PatientTableViewController: UITableViewController {
         
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -98,10 +77,6 @@ class PatientTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        loadPatients()
-        
-        print(doctorId)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,23 +93,25 @@ class PatientTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return patients.count
+  
+        return tests.count
         
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Table view cells are reused and should be dequeued using a cell identifier.
-        let cellIdentifier = "PatientTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PatientTableViewCell
+        let cellIdentifier = "TestTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TestTableViewCell
         
         // Fetches the appropriate meal for the data source layout.
-        let patient = patients[indexPath.row]
+        let test = tests[indexPath.row]
         
-        cell.patientName.text = patient.patient_name
-        cell.patientDepartment.text = patient.department
-        cell.patientRoom.text = patient.room_no
+        cell.testDate.text = test.patient_name
+        cell.testBlood.text = test.blood_presure
+        cell.testCholesterol.text = test.cholesterol
+        cell.testHeart.text = test.heart_rate
+        cell.testTemperature.text = test.temperature
         
         return cell
         
@@ -175,24 +152,17 @@ class PatientTableViewController: UITableViewController {
     }
     */
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        let testTableViewController = segue.destinationViewController as! TestTableViewController
-        
-        // Get the cell that generated this segue.
-        if let selectedPatientCell = sender as? PatientTableViewCell {
-            let indexPath = tableView.indexPathForCell(selectedPatientCell)!
-            let selectedPatient = patients[indexPath.row]
-            testTableViewController.patientId = selectedPatient.id
-        }
-        
+
         
     }
+    */
 
 }

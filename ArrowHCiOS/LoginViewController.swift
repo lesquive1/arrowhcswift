@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
                 var pswdT=passwordTF.text
                 // do something with personName and personID
                 //  print(personName)
-                // print(personID)
+                //print(personID)
                 if(personUName==userT && personPWD==pswdT)
                 {
                     if(profile=="doctor"){
@@ -61,9 +61,13 @@ class LoginViewController: UIViewController {
                          
                          let vc:PatientTableViewController=storyboard.instantiateViewControllerWithIdentifier("navStaffView") as! PatientTableViewController
                          // .instantiatViewControllerWithIdentifier() returns AnyObject! this must be downcast to utilize it
+                        
+                        vc.doctorId = personID
                          
                          self.presentViewController(vc, animated: false, completion: nil)
+
                         
+                        //
                         
                         /*
                         let alert=UIAlertController(title: "Profile", message: "User is", preferredStyle: UIAlertControllerStyle.Alert)
@@ -91,6 +95,17 @@ class LoginViewController: UIViewController {
             
         }
         
+        
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        let patientTableViewController = segue.destinationViewController as! PatientTableViewController
+        
+        patientTableViewController.doctorId = personID
         
         
     }
