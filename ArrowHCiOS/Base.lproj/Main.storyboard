@@ -143,13 +143,18 @@
                                 <action selector="cancel:" destination="dB9-9S-paN" id="T4K-Aq-JOX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Gp-kt-e61"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Gp-kt-e61">
+                            <connections>
+                                <segue destination="fEc-FS-NCc" kind="unwind" unwindAction="unwindToPatientList:" id="i49-LD-Zfb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="saveButton" destination="2Gp-kt-e61" id="cjK-Om-lAr"/>
+                        <outlet property="saveButton" destination="2Gp-kt-e61" id="wL4-6Q-scT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I3-dG-1nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fEc-FS-NCc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2822" y="-655"/>
         </scene>

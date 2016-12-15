@@ -199,8 +199,16 @@ class PatientTableViewController: UITableViewController {
             print("Adding new patient.")
         }
         
-
-
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func unwindToPatientList(sender: UIStoryboardSegue) {
+        
+        patients = [Patient]()
+        
+        loadPatients()
+        
         
     }
 
