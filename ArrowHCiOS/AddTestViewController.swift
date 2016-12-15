@@ -44,12 +44,12 @@ class AddTestViewController: UIViewController, UITextFieldDelegate, UINavigation
         
         let mDate = NSDate()
         
-        let jsonDict = ["patient_name": "Teresa",
-                        "patient_id": "584f6d711d9dac000451c334",
-                        "blood_presure": "test",
-                        "cholesterol": "test",
-                        "heart_rate": "test",
-                        "temperature": "test",
+        let jsonDict = ["patient_name": "Maria6",
+                        "patient_id": "58530014ddff3a000444170b",
+                        "blood_presure": "test1",
+                        "cholesterol": "test2",
+                        "heart_rate": "test3",
+                        "temperature": "test4",
                         "date": String(mDate)] as Dictionary<String, String>
         
         // + "Dec 12, 2016 10:46:17 PM"
