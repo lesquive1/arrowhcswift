@@ -305,7 +305,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bp" destination="2h4-5M-DCs" id="4iu-54-lqM"/>
+                        <outlet property="cho" destination="1Yt-8T-cuJ" id="vrs-DP-vnD"/>
+                        <outlet property="heartbeat" destination="0u0-A2-3Kw" id="ozu-pZ-9j9"/>
+                        <outlet property="pname" destination="QEh-4S-WQr" id="xTF-Nv-l0O"/>
                         <outlet property="saveButton" destination="jZz-we-Yt7" id="5HO-os-T3k"/>
+                        <outlet property="temp" destination="NKg-hz-jeX" id="kEl-HY-1Tn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAJ-gD-dch" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -345,7 +350,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temper." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-bW-CkX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temper." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-bW-CkX">
                                             <rect key="frame" x="250" y="130" width="62" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="SQ0-w1-NyU"/>
@@ -389,7 +394,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cholesterol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRp-1L-cDa">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cholesterol" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRp-1L-cDa">
                                             <rect key="frame" x="224" y="69" width="88" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="88" id="udr-ya-Nkv"/>

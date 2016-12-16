@@ -172,6 +172,7 @@ class TestTableViewController: UITableViewController {
         
         addtestViewController.patientId = patientId
         addtestViewController.patientName = patientName
+        //addtestViewController.pname.text = patientName!
 
         
     }

@@ -10,6 +10,16 @@ import UIKit
 
 class AddTestViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
     
+    
+    @IBOutlet weak var pname: UILabel!
+    
+    
+    @IBOutlet weak var bp: UITextField!
+    
+    @IBOutlet weak var heartbeat: UITextField!
+    
+    @IBOutlet weak var temp: UITextField!
+    @IBOutlet weak var cho: UITextField!
     var patientName: String = ""
     var patientId: String = ""
 
@@ -17,6 +27,8 @@ class AddTestViewController: UIViewController, UITextFieldDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pname.text = patientName
 
         // Do any additional setup after loading the view.
     }
@@ -47,12 +59,20 @@ class AddTestViewController: UIViewController, UITextFieldDelegate, UINavigation
         
         let mDate = NSDate()
         
+        
+        //let name=pname.text
+        let bld=bp.text
+        let hb = heartbeat.text
+        let choles=cho.text
+        let temper=temp.text
+
+        
         let jsonDict = ["patient_name": patientName,
                         "patient_id": patientId,
-                        "blood_presure": "test1",
-                        "cholesterol": "test2",
-                        "heart_rate": "test3",
-                        "temperature": "test4",
+                        "blood_presure": bld!,
+                        "cholesterol": choles!,
+                        "heart_rate": hb!,
+                        "temperature": temper!,
                         "date": String(mDate)] as Dictionary<String, String>
         
         // + "Dec 12, 2016 10:46:17 PM"
