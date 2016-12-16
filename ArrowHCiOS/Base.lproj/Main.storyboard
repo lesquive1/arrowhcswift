@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.42323292019999997" green="1" blue="0.93924291339999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PatientTableViewCell" rowHeight="112" id="OfH-L4-mOp" customClass="PatientTableViewCell" customModule="ArrowHCiOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="112"/>
@@ -74,6 +75,7 @@
                                         <constraint firstItem="qOC-4a-Lze" firstAttribute="leading" secondItem="TeI-A8-bLo" secondAttribute="leadingMargin" constant="2" id="tcK-vr-qjx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.17929299970000001" green="1" blue="0.93635633579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="patientDepartment" destination="qOC-4a-Lze" id="9Ed-OU-vJg"/>
                                     <outlet property="patientName" destination="479-jP-w7o" id="EXy-x4-xQ1"/>
@@ -169,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.17929299970000001" green="1" blue="0.93635633579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3o9-Xf-4JJ" firstAttribute="top" secondItem="SPb-Dx-Qga" secondAttribute="bottom" constant="41" id="0t8-sf-fou"/>
                             <constraint firstItem="fxS-dM-5Zx" firstAttribute="centerX" secondItem="aHW-zQ-huj" secondAttribute="centerX" id="6bM-mY-anj"/>
@@ -426,6 +428,7 @@
                                         <constraint firstItem="LZa-lo-9OT" firstAttribute="trailing" secondItem="Qvg-T5-Zsr" secondAttribute="trailingMargin" id="vgL-2n-teD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.42323292019999997" green="1" blue="0.93924291339999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="testBlood" destination="cIh-Mx-mOF" id="eiG-tW-YTp"/>
                                     <outlet property="testCholesterol" destination="vRp-1L-cDa" id="j7C-hn-ktQ"/>
@@ -619,7 +622,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQs-EN-8fl">
                                 <rect key="frame" x="67" y="405" width="187" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNR-Ib-e6J">
                                 <rect key="frame" x="8" y="467" width="304" height="46"/>
@@ -630,7 +633,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42323292015474656" green="1" blue="0.93924291337071519" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rQs-EN-8fl" firstAttribute="leading" secondItem="gkb-oL-4we" secondAttribute="leading" id="1Bj-su-tLP"/>
                             <constraint firstItem="gkb-oL-4we" firstAttribute="top" secondItem="4gN-3A-qWR" secondAttribute="bottom" constant="29" id="3Se-tj-P7K"/>
